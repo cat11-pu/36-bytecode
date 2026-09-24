@@ -1,0 +1,11 @@
+{
+  "instruction_budget": 100000,
+  "stack_invariant": true,
+  "programs": {
+    "valid": [["PUSH", 5], ["STORE", "x"], ["LOAD", "x"], ["PUSH", 2], ["ADD"], ["HALT"]],
+    "bad_jump": [["PUSH", 1], ["JMP", 99], ["HALT"]],
+    "bad_stack": [["PUSH", 1], ["ADD"], ["HALT"]],
+    "bad_var": [["LOAD", "y"], ["HALT"]],
+    "unreachable": [["HALT"], ["PUSH", 1], ["HALT"]]
+  }
+}
